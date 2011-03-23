@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 56: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 97: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 98: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 99: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"\Users\minifig\Digilent2011\ScopeGraph\AC97Test.v" Line 40: Assignment to <arg fmt="%s" index="1">audR</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn&lt;5:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3010" delta="old" >&quot;<arg fmt="%s" index="1">/users/minifig/digilent2011/scopegraph/ac97test.v</arg>&quot; line <arg fmt="%d" index="2">36</arg>: Output port &lt;<arg fmt="%s" index="3">fAudRIn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">audioDriver</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cmdData_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cmdData_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cmdData_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cmdData_10&gt; &lt;cmdAddr_1&gt; &lt;cmdAddr_3&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">audioDriver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">cmdAddr</arg>&lt;<arg fmt="%d" index="2">6</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">cmdData</arg>&lt;<arg fmt="%d" index="2">15</arg>:<arg fmt="%d" index="3">12</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdAddr_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cmdData_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cmdData_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cmdData_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cmdAddr_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">AC97Driver</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cmdAddr_3&gt; &lt;cmdData_2&gt; &lt;cmdData_10&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudRIn_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">audioDriver/fAudLIn_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">AC97Test</arg>&gt;.
+</msg>
+
+</messages>
+

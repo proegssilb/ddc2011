@@ -1,0 +1,527 @@
+Release 12.2 - xst M.63c (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: AC97Test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "AC97Test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "AC97Test"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-csg324
+
+---- Source Options
+Top Module Name                    : AC97Test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v\" into library work
+Parsing module <AC97Driver>.
+Analyzing Verilog file \"\Users\minifig\Digilent2011\ScopeGraph\AC97Test.v\" into library work
+Parsing module <AC97Test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <AC97Test>.
+
+Elaborating module <$unit_1>.
+
+Elaborating module <AC97Driver>.
+WARNING:HDLCompiler:413 - "\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 56: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 97: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 98: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "\Users\minifig\Digilent2011\ScopeGraph\AC97Driver.v" Line 99: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "\Users\minifig\Digilent2011\ScopeGraph\AC97Test.v" Line 40: Assignment to audR ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <AC97Test>.
+    Related source file is "/users/minifig/digilent2011/scopegraph/ac97test.v".
+WARNING:Xst:647 - Input <btn<5:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3010 - "/users/minifig/digilent2011/scopegraph/ac97test.v" line 36: Output port <fAudRIn> of the instance <audioDriver> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <AC97Test> synthesized.
+
+Synthesizing Unit <AC97Driver>.
+    Related source file is "/users/minifig/digilent2011/scopegraph/ac97driver.v".
+    Found 1-bit register for signal <valid>.
+    Found 20-bit register for signal <frameBit>.
+    Found 4-bit register for signal <slotNum>.
+    Found 4-bit register for signal <state>.
+    Found 7-bit register for signal <cmdAddr>.
+    Found 16-bit register for signal <cmdData>.
+    Found 1-bit register for signal <aSDO>.
+    Found 16-bit register for signal <fAudLIn>.
+    Found 16-bit register for signal <fAudRIn>.
+    Found 21-bit subtractor for signal <GND_3_o_GND_3_o_sub_28_OUT>.
+    Found 21-bit subtractor for signal <GND_3_o_GND_3_o_sub_44_OUT>.
+    Found 5-bit adder for signal <n0172[4:0]> created at line 97.
+    Found 5-bit adder for signal <n0174[4:0]> created at line 99.
+    Found 1-bit 4-to-1 multiplexer for signal <_n0213> created at line 89.
+    Found 20-bit comparator greater for signal <GND_3_o_frameBit[19]_LessThan_43_o> created at line 104
+    Found 32-bit comparator lessequal for signal <n0063> created at line 105
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  85 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  45 Multiplexer(s).
+Unit <AC97Driver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 21-bit subtractor                                     : 2
+ 5-bit adder                                           : 2
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 16-bit register                                       : 3
+ 20-bit register                                       : 1
+ 4-bit register                                        : 2
+ 7-bit register                                        : 1
+# Comparators                                          : 2
+ 20-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 45
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <cmdData_3> in Unit <audioDriver> is equivalent to the following FF/Latch, which will be removed : <cmdData_11> 
+INFO:Xst:2261 - The FF/Latch <cmdData_2> in Unit <audioDriver> is equivalent to the following 3 FFs/Latches, which will be removed : <cmdData_10> <cmdAddr_1> <cmdAddr_3> 
+WARNING:Xst:2677 - Node <cmdData_0> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_1> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_4> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_5> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_6> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_7> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_8> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_9> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_12> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_13> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_14> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdData_15> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdAddr_0> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdAddr_2> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdAddr_5> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2677 - Node <cmdAddr_6> of sequential type is unconnected in block <audioDriver>.
+WARNING:Xst:2404 -  FFs/Latches <cmdAddr<6:5>> (without init value) have a constant value of 0 in block <AC97Driver>.
+WARNING:Xst:2404 -  FFs/Latches <cmdData<15:12>> (without init value) have a constant value of 0 in block <AC97Driver>.
+
+Synthesizing (advanced) Unit <AC97Driver>.
+The following registers are absorbed into counter <slotNum>: 1 register on signal <slotNum>.
+Unit <AC97Driver> synthesized (advanced).
+WARNING:Xst:2677 - Node <cmdAddr_0> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdAddr_2> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_0> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_1> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_4> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_5> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_6> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_7> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_8> of sequential type is unconnected in block <AC97Driver>.
+WARNING:Xst:2677 - Node <cmdData_9> of sequential type is unconnected in block <AC97Driver>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 21-bit subtractor                                     : 2
+ 5-bit adder                                           : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Comparators                                          : 2
+ 20-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 45
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <cmdData_3> in Unit <AC97Driver> is equivalent to the following FF/Latch, which will be removed : <cmdData_11> 
+INFO:Xst:2261 - The FF/Latch <cmdAddr_1> in Unit <AC97Driver> is equivalent to the following 3 FFs/Latches, which will be removed : <cmdAddr_3> <cmdData_2> <cmdData_10> 
+
+Optimizing unit <AC97Test> ...
+
+Optimizing unit <AC97Driver> ...
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_15> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_14> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_13> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_12> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_11> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_10> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_9> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_8> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_7> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_6> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_5> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_4> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_3> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_2> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_1> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudRIn_0> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_15> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_14> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_13> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_12> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_11> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_10> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_9> of sequential type is unconnected in block <AC97Test>.
+WARNING:Xst:2677 - Node <audioDriver/fAudLIn_8> of sequential type is unconnected in block <AC97Test>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block AC97Test, actual ratio is 0.
+FlipFlop audioDriver/frameBit_0 has been replicated 2 time(s)
+FlipFlop audioDriver/frameBit_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : AC97Test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 195
+#      GND                         : 1
+#      INV                         : 38
+#      LUT1                        : 3
+#      LUT2                        : 2
+#      LUT3                        : 6
+#      LUT4                        : 8
+#      LUT5                        : 8
+#      LUT6                        : 48
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 41
+# FlipFlops/Latches                : 44
+#      FDC                         : 28
+#      FDCE                        : 4
+#      FDE                         : 11
+#      FDRE                        : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 15
+#      IBUF                        : 3
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  54576     0%  
+ Number of Slice LUTs:                  113  out of  27288     0%  
+    Number used as Logic:               113  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    116
+   Number with an unused Flip Flop:      72  out of    116    62%  
+   Number with an unused LUT:             3  out of    116     2%  
+   Number of fully used LUT-FF pairs:    41  out of    116    35%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  15  out of    218     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 44    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.008ns (Maximum Frequency: 166.445MHz)
+   Minimum input arrival time before clock: 6.731ns
+   Maximum output required time after clock: 9.205ns
+   Maximum combinational path delay: 7.023ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.008ns (frequency: 166.445MHz)
+  Total number of paths / destination ports: 2978 / 57
+-------------------------------------------------------------------------
+Delay:               6.008ns (Levels of Logic = 21)
+  Source:            audioDriver/frameBit_1 (FF)
+  Destination:       audioDriver/fAudLIn_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: audioDriver/frameBit_1 to audioDriver/fAudLIn_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.633   0.876  audioDriver/frameBit_1 (audioDriver/frameBit_1)
+     LUT1:I0->O            1   0.373   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<1>_rt (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<1>_rt)
+     MUXCY:S->O            1   0.330   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<1> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<1>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<2> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<2>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<4> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<4>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<5> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<5>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<6> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<6>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<8> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<8>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<9> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<9>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<10> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<10>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<12> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<12>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<13> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<13>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<14> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<14>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<16> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<16>)
+     MUXCY:CI->O           1   0.032   0.000  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<17> (audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<17>)
+     XORCY:CI->O           2   0.269   0.726  audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_xor<18> (audioDriver/GND_3_o_GND_3_o_sub_44_OUT<18>)
+     LUT3:I2->O            4   0.373   1.405  audioDriver/GND_3_o_GND_3_o_LessThan_45_o24_SW0 (N4)
+     LUT6:I1->O            1   0.373   0.000  audioDriver/Mmux_fAudLIn[4]_aSDI_MUX_142_o11 (audioDriver/fAudLIn[4]_aSDI_MUX_142_o)
+     FDE:D                     0.142          audioDriver/fAudLIn_4
+    ----------------------------------------
+    Total                      6.008ns (3.001ns logic, 3.007ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 53 / 53
+-------------------------------------------------------------------------
+Offset:              6.731ns (Levels of Logic = 3)
+  Source:            btn<0> (PAD)
+  Destination:       audioDriver/fAudLIn_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<0> to audioDriver/fAudLIn_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.328   2.171  btn_0_IBUF (btn_0_IBUF)
+     LUT5:I0->O            1   0.373   1.060  audioDriver/_n0231_inv1 (audioDriver/_n0231_inv1)
+     LUT4:I0->O            8   0.364   0.943  audioDriver/_n0231_inv5 (audioDriver/_n0231_inv)
+     FDE:CE                    0.492          audioDriver/fAudLIn_0
+    ----------------------------------------
+    Total                      6.731ns (2.557ns logic, 4.174ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 10
+-------------------------------------------------------------------------
+Offset:              9.205ns (Levels of Logic = 4)
+  Source:            audioDriver/frameBit_17 (FF)
+  Destination:       AUDSYNC (PAD)
+  Source Clock:      clk rising
+
+  Data Path: audioDriver/frameBit_17 to AUDSYNC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.633   1.421  audioDriver/frameBit_17 (audioDriver/frameBit_17)
+     LUT6:I0->O           21   0.373   1.598  audioDriver/GND_3_o_GND_3_o_OR_33_o13 (audioDriver/GND_3_o_GND_3_o_OR_33_o12)
+     LUT4:I1->O            5   0.373   0.841  audioDriver/GND_3_o_GND_3_o_OR_33_o14 (audioDriver/N7)
+     LUT5:I4->O            1   0.373   0.681  audioDriver/GND_3_o_GND_3_o_OR_33_o2 (AUDSYNC_OBUF)
+     OBUF:I->O                 2.912          AUDSYNC_OBUF (AUDSYNC)
+    ----------------------------------------
+    Total                      9.205ns (4.664ns logic, 4.541ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               7.023ns (Levels of Logic = 3)
+  Source:            btn<0> (PAD)
+  Destination:       AUDRST (PAD)
+
+  Data Path: btn<0> to AUDRST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.328   1.569  btn_0_IBUF (btn_0_IBUF)
+     INV:I->O              5   0.374   0.840  audioDriver/aReset1_INV_0 (AUDRST_OBUF)
+     OBUF:I->O                 2.912          AUDRST_OBUF (AUDRST)
+    ----------------------------------------
+    Total                      7.023ns (4.614ns logic, 2.409ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.48 secs
+ 
+--> 
+
+Total memory usage is 197448 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   58 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

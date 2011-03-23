@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.xst" -ofn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o AC97Test_map.ncd AC97Test.ngd AC97Test.pcf 
+par -w -intstyle ise -ol high -mt off AC97Test_map.ncd AC97Test.ncd AC97Test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml AC97Test.twx AC97Test.ncd -o AC97Test.twr AC97Test.pcf -ucf AtlysGeneral.ucf 
+xst -intstyle ise -ifn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.xst" -ofn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o AC97Test_map.ncd AC97Test.ngd AC97Test.pcf 
+par -w -intstyle ise -ol high -mt off AC97Test_map.ncd AC97Test.ncd AC97Test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml AC97Test.twx AC97Test.ncd -o AC97Test.twr AC97Test.pcf -ucf AtlysGeneral.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o AC97Test_map.ncd AC97Test.ngd AC97Test.pcf 
+par -w -intstyle ise -ol high -mt off AC97Test_map.ncd AC97Test.ncd AC97Test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml AC97Test.twx AC97Test.ncd -o AC97Test.twr AC97Test.pcf -ucf AtlysGeneral.ucf 
+bitgen -intstyle ise -f AC97Test.ut AC97Test.ncd 
+xst -intstyle ise -ifn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.xst" -ofn "C:/Users/minifig/Digilent2011/ScopeGraph/AC97Test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc AtlysGeneral.ucf -p xc6slx45-csg324-2 AC97Test.ngc AC97Test.ngd  
+map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -global_opt off -mt off -ir off -pr off -lc off -power off -o AC97Test_map.ncd AC97Test.ngd AC97Test.pcf 
+par -w -intstyle ise -ol high -mt off AC97Test_map.ncd AC97Test.ncd AC97Test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml AC97Test.twx AC97Test.ncd -o AC97Test.twr AC97Test.pcf -ucf AtlysGeneral.ucf 
+bitgen -intstyle ise -f AC97Test.ut AC97Test.ncd 

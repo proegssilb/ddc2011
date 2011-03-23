@@ -1,0 +1,50 @@
+//! **************************************************************************
+// Written by: Map M.63c on Wed Mar 23 00:57:11 2011
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Led<3>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Led<4>" LOCATE = SITE "M13" LEVEL 1;
+COMP "BITCLK" LOCATE = SITE "L13" LEVEL 1;
+COMP "Led<5>" LOCATE = SITE "D4" LEVEL 1;
+COMP "Led<6>" LOCATE = SITE "P16" LEVEL 1;
+COMP "Led<7>" LOCATE = SITE "N12" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "T15" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "N4" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "P4" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "P3" LEVEL 1;
+COMP "btn<4>" LOCATE = SITE "F6" LEVEL 1;
+COMP "AUDRST" LOCATE = SITE "T17" LEVEL 1;
+COMP "btn<5>" LOCATE = SITE "F5" LEVEL 1;
+COMP "AUDSYNC" LOCATE = SITE "U17" LEVEL 1;
+COMP "AUDSDI" LOCATE = SITE "T18" LEVEL 1;
+COMP "AUDSDO" LOCATE = SITE "N16" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "U18" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "M14" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "N14" LEVEL 1;
+TIMEGRP clk = BEL "audioDriver/slotNum_3" BEL "audioDriver/slotNum_2" BEL
+        "audioDriver/slotNum_1" BEL "audioDriver/slotNum_0" BEL
+        "audioDriver/aSDO" BEL "audioDriver/frameBit_19" BEL
+        "audioDriver/frameBit_18" BEL "audioDriver/frameBit_17" BEL
+        "audioDriver/frameBit_16" BEL "audioDriver/frameBit_15" BEL
+        "audioDriver/frameBit_14" BEL "audioDriver/frameBit_13" BEL
+        "audioDriver/frameBit_12" BEL "audioDriver/frameBit_11" BEL
+        "audioDriver/frameBit_10" BEL "audioDriver/frameBit_9" BEL
+        "audioDriver/frameBit_8" BEL "audioDriver/frameBit_7" BEL
+        "audioDriver/frameBit_6" BEL "audioDriver/frameBit_5" BEL
+        "audioDriver/frameBit_4" BEL "audioDriver/frameBit_3" BEL
+        "audioDriver/frameBit_2" BEL "audioDriver/frameBit_1" BEL
+        "audioDriver/frameBit_0" BEL "audioDriver/fAudLIn_7" BEL
+        "audioDriver/fAudLIn_6" BEL "audioDriver/fAudLIn_5" BEL
+        "audioDriver/fAudLIn_4" BEL "audioDriver/fAudLIn_3" BEL
+        "audioDriver/fAudLIn_2" BEL "audioDriver/fAudLIn_1" BEL
+        "audioDriver/fAudLIn_0" BEL "audioDriver/cmdData_3" BEL
+        "audioDriver/cmdAddr_4" BEL "audioDriver/cmdAddr_1" BEL
+        "audioDriver/valid" BEL "audioDriver/state_3" BEL
+        "audioDriver/state_2" BEL "audioDriver/state_1" BEL
+        "audioDriver/state_0" BEL "audioDriver/frameBit_0_1" BEL
+        "audioDriver/frameBit_3_1" BEL "audioDriver/frameBit_0_2" BEL
+        "clk_IBUF_BUFG" BEL "BITCLK";
+TS_clk = PERIOD TIMEGRP "clk" 20800 ns HIGH 50%;
+SCHEMATIC END;
+

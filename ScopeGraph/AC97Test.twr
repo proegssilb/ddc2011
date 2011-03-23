@@ -1,0 +1,608 @@
+--------------------------------------------------------------------------------
+Release 12.2 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.2\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml AC97Test.twx AC97Test.ncd -o AC97Test.twr AC97Test.pcf -ucf
+AtlysGeneral.ucf
+
+Design file:              AC97Test.ncd
+Physical constraint file: AC97Test.pcf
+Device,package,speed:     xc6slx45,csg324,C,-2 (PRODUCTION 1.10 2010-06-28)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20800 ns HIGH 50%;
+
+ 2978 paths analyzed, 233 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.181ns.
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/fAudLIn_0 (SLICE_X50Y36.A1), 44 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     20792.819ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_12 (FF)
+  Destination:          audioDriver/fAudLIn_0 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      7.130ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.016ns (0.191 - 0.207)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_12 to audioDriver/fAudLIn_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y32.CQ      Tcko                  0.548   audioDriver/frameBit<13>
+                                                       audioDriver/frameBit_12
+    SLICE_X48Y38.A2      net (fanout=4)        1.554   audioDriver/frameBit<12>
+    SLICE_X48Y38.COUT    Topcya                0.712   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_lut<12>_INV_0
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.125   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.AMUX    Tcina                 0.288   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_xor<20>
+    SLICE_X51Y36.B1      net (fanout=8)        1.846   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+    SLICE_X51Y36.B       Tilo                  0.341   N22
+                                                       audioDriver/GND_3_o_GND_3_o_AND_71_o11_SW0
+    SLICE_X50Y36.A1      net (fanout=1)        1.015   N16
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[0]_aSDI_MUX_146_o11
+                                                       audioDriver/fAudLIn_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.130ns (2.587ns logic, 4.543ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20792.823ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_1 (FF)
+  Destination:          audioDriver/fAudLIn_0 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      7.102ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.040ns (0.586 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_1 to audioDriver/fAudLIn_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y30.DQ      Tcko                  0.553   audioDriver/frameBit<1>
+                                                       audioDriver/frameBit_1
+    SLICE_X48Y35.B3      net (fanout=6)        1.134   audioDriver/frameBit<1>
+    SLICE_X48Y35.COUT    Topcyb                0.709   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit<1>_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.125   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.AMUX    Tcina                 0.288   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_xor<20>
+    SLICE_X51Y36.B1      net (fanout=8)        1.846   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+    SLICE_X51Y36.B       Tilo                  0.341   N22
+                                                       audioDriver/GND_3_o_GND_3_o_AND_71_o11_SW0
+    SLICE_X50Y36.A1      net (fanout=1)        1.015   N16
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[0]_aSDI_MUX_146_o11
+                                                       audioDriver/fAudLIn_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.102ns (2.970ns logic, 4.132ns route)
+                                                       (41.8% logic, 58.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20792.863ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_0_1 (FF)
+  Destination:          audioDriver/fAudLIn_0 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      7.062ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.040ns (0.586 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_0_1 to audioDriver/fAudLIn_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y30.DQ      Tcko                  0.633   audioDriver/frameBit_0_1
+                                                       audioDriver/frameBit_0_1
+    SLICE_X48Y35.A3      net (fanout=1)        1.011   audioDriver/frameBit_0_1
+    SLICE_X48Y35.COUT    Topcya                0.712   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit_0_1_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.125   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X48Y40.AMUX    Tcina                 0.288   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_xor<20>
+    SLICE_X51Y36.B1      net (fanout=8)        1.846   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<20>
+    SLICE_X51Y36.B       Tilo                  0.341   N22
+                                                       audioDriver/GND_3_o_GND_3_o_AND_71_o11_SW0
+    SLICE_X50Y36.A1      net (fanout=1)        1.015   N16
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[0]_aSDI_MUX_146_o11
+                                                       audioDriver/fAudLIn_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.062ns (3.053ns logic, 4.009ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/fAudLIn_5 (SLICE_X49Y38.C2), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.228ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_1 (FF)
+  Destination:          audioDriver/fAudLIn_5 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.692ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.045ns (0.581 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_1 to audioDriver/fAudLIn_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y30.DQ      Tcko                  0.553   audioDriver/frameBit<1>
+                                                       audioDriver/frameBit_1
+    SLICE_X48Y35.B3      net (fanout=6)        1.134   audioDriver/frameBit<1>
+    SLICE_X48Y35.DMUX    Topbd                 0.962   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit<1>_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X49Y37.B5      net (fanout=2)        1.061   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<3>
+    SLICE_X49Y37.B       Tilo                  0.341   audioDriver/fAudLIn<7>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o24_SW0
+    SLICE_X49Y38.C2      net (fanout=4)        2.136   N4
+    SLICE_X49Y38.CLK     Tas                   0.505   audioDriver/fAudLIn<6>
+                                                       audioDriver/Mmux_fAudLIn[5]_aSDI_MUX_141_o11
+                                                       audioDriver/fAudLIn_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.692ns (2.361ns logic, 4.331ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.310ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_0_1 (FF)
+  Destination:          audioDriver/fAudLIn_5 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.610ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.045ns (0.581 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_0_1 to audioDriver/fAudLIn_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y30.DQ      Tcko                  0.633   audioDriver/frameBit_0_1
+                                                       audioDriver/frameBit_0_1
+    SLICE_X48Y35.A3      net (fanout=1)        1.011   audioDriver/frameBit_0_1
+    SLICE_X48Y35.DMUX    Topad                 0.923   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit_0_1_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X49Y37.B5      net (fanout=2)        1.061   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<3>
+    SLICE_X49Y37.B       Tilo                  0.341   audioDriver/fAudLIn<7>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o24_SW0
+    SLICE_X49Y38.C2      net (fanout=4)        2.136   N4
+    SLICE_X49Y38.CLK     Tas                   0.505   audioDriver/fAudLIn<6>
+                                                       audioDriver/Mmux_fAudLIn[5]_aSDI_MUX_141_o11
+                                                       audioDriver/fAudLIn_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.610ns (2.402ns logic, 4.208ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.322ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_12 (FF)
+  Destination:          audioDriver/fAudLIn_5 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.616ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.027ns (0.286 - 0.313)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_12 to audioDriver/fAudLIn_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y32.CQ      Tcko                  0.548   audioDriver/frameBit<13>
+                                                       audioDriver/frameBit_12
+    SLICE_X48Y38.A2      net (fanout=4)        1.554   audioDriver/frameBit<12>
+    SLICE_X48Y38.COUT    Topcya                0.712   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_lut<12>_INV_0
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X48Y39.CMUX    Tcinc                 0.375   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<19>
+    SLICE_X49Y37.B6      net (fanout=2)        0.442   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<18>
+    SLICE_X49Y37.B       Tilo                  0.341   audioDriver/fAudLIn<7>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o24_SW0
+    SLICE_X49Y38.C2      net (fanout=4)        2.136   N4
+    SLICE_X49Y38.CLK     Tas                   0.505   audioDriver/fAudLIn<6>
+                                                       audioDriver/Mmux_fAudLIn[5]_aSDI_MUX_141_o11
+                                                       audioDriver/fAudLIn_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.616ns (2.481ns logic, 4.135ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/fAudLIn_1 (SLICE_X50Y36.B1), 81 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.485ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_1 (FF)
+  Destination:          audioDriver/fAudLIn_1 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.440ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.040ns (0.586 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_1 to audioDriver/fAudLIn_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y30.DQ      Tcko                  0.553   audioDriver/frameBit<1>
+                                                       audioDriver/frameBit_1
+    SLICE_X48Y35.B3      net (fanout=6)        1.134   audioDriver/frameBit<1>
+    SLICE_X48Y35.COUT    Topcyb                0.709   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit<1>_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.AMUX    Tcina                 0.288   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X49Y38.B2      net (fanout=1)        1.104   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<12>
+    SLICE_X49Y38.B       Tilo                  0.341   audioDriver/fAudLIn<6>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o21
+    SLICE_X50Y36.B1      net (fanout=8)        1.477   audioDriver/GND_3_o_GND_3_o_LessThan_45_o2
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[1]_aSDI_MUX_145_o11
+                                                       audioDriver/fAudLIn_1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.440ns (2.716ns logic, 3.724ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.525ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_0_1 (FF)
+  Destination:          audioDriver/fAudLIn_1 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.400ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.040ns (0.586 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_0_1 to audioDriver/fAudLIn_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y30.DQ      Tcko                  0.633   audioDriver/frameBit_0_1
+                                                       audioDriver/frameBit_0_1
+    SLICE_X48Y35.A3      net (fanout=1)        1.011   audioDriver/frameBit_0_1
+    SLICE_X48Y35.COUT    Topcya                0.712   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/frameBit_0_1_rt
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.AMUX    Tcina                 0.288   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X49Y38.B2      net (fanout=1)        1.104   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<12>
+    SLICE_X49Y38.B       Tilo                  0.341   audioDriver/fAudLIn<6>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o21
+    SLICE_X50Y36.B1      net (fanout=8)        1.477   audioDriver/GND_3_o_GND_3_o_LessThan_45_o2
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[1]_aSDI_MUX_145_o11
+                                                       audioDriver/fAudLIn_1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.400ns (2.799ns logic, 3.601ns route)
+                                                       (43.7% logic, 56.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     20793.527ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               audioDriver/frameBit_3_1 (FF)
+  Destination:          audioDriver/fAudLIn_1 (FF)
+  Requirement:          20800.000ns
+  Data Path Delay:      6.398ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.040ns (0.586 - 0.626)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: audioDriver/frameBit_3_1 to audioDriver/fAudLIn_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y31.AQ      Tcko                  0.553   audioDriver/frameBit_3_1
+                                                       audioDriver/frameBit_3_1
+    SLICE_X48Y35.D2      net (fanout=1)        1.338   audioDriver/frameBit_3_1
+    SLICE_X48Y35.COUT    Topcyd                0.463   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_lut<3>_INV_0
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<3>
+    SLICE_X48Y36.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<7>
+    SLICE_X48Y37.COUT    Tbyp                  0.127   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.003   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<11>
+    SLICE_X48Y38.AMUX    Tcina                 0.288   audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+                                                       audioDriver/Msub_GND_3_o_GND_3_o_sub_44_OUT_cy<15>
+    SLICE_X49Y38.B2      net (fanout=1)        1.104   audioDriver/GND_3_o_GND_3_o_sub_44_OUT<12>
+    SLICE_X49Y38.B       Tilo                  0.341   audioDriver/fAudLIn<6>
+                                                       audioDriver/GND_3_o_GND_3_o_LessThan_45_o21
+    SLICE_X50Y36.B1      net (fanout=8)        1.477   audioDriver/GND_3_o_GND_3_o_LessThan_45_o2
+    SLICE_X50Y36.CLK     Tas                   0.571   audioDriver/fAudLIn<3>
+                                                       audioDriver/Mmux_fAudLIn[1]_aSDI_MUX_145_o11
+                                                       audioDriver/fAudLIn_1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.398ns (2.470ns logic, 3.928ns route)
+                                                       (38.6% logic, 61.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20800 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/fAudLIn_4 (SLICE_X49Y38.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.453ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               audioDriver/fAudLIn_4 (FF)
+  Destination:          audioDriver/fAudLIn_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.453ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUF_BUFG rising at 20800.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: audioDriver/fAudLIn_4 to audioDriver/fAudLIn_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y38.AQ      Tcko                  0.198   audioDriver/fAudLIn<6>
+                                                       audioDriver/fAudLIn_4
+    SLICE_X49Y38.A6      net (fanout=3)        0.040   audioDriver/fAudLIn<4>
+    SLICE_X49Y38.CLK     Tah         (-Th)    -0.215   audioDriver/fAudLIn<6>
+                                                       audioDriver/Mmux_fAudLIn[4]_aSDI_MUX_142_o11
+                                                       audioDriver/fAudLIn_4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.453ns (0.413ns logic, 0.040ns route)
+                                                       (91.2% logic, 8.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/fAudLIn_7 (SLICE_X49Y37.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               audioDriver/fAudLIn_7 (FF)
+  Destination:          audioDriver/fAudLIn_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.455ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUF_BUFG rising at 20800.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: audioDriver/fAudLIn_7 to audioDriver/fAudLIn_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y37.AQ      Tcko                  0.198   audioDriver/fAudLIn<7>
+                                                       audioDriver/fAudLIn_7
+    SLICE_X49Y37.A6      net (fanout=3)        0.042   audioDriver/fAudLIn<7>
+    SLICE_X49Y37.CLK     Tah         (-Th)    -0.215   audioDriver/fAudLIn<7>
+                                                       audioDriver/Mmux_fAudLIn[7]_aSDI_MUX_139_o11
+                                                       audioDriver/fAudLIn_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.455ns (0.413ns logic, 0.042ns route)
+                                                       (90.8% logic, 9.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point audioDriver/state_0 (SLICE_X53Y31.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               audioDriver/state_0 (FF)
+  Destination:          audioDriver/state_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.470ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUF_BUFG rising at 20800.000ns
+  Destination Clock:    clk_IBUF_BUFG rising at 20800.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: audioDriver/state_0 to audioDriver/state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y31.AQ      Tcko                  0.198   audioDriver/state<2>
+                                                       audioDriver/state_0
+    SLICE_X53Y31.A6      net (fanout=6)        0.057   audioDriver/state<0>
+    SLICE_X53Y31.CLK     Tah         (-Th)    -0.215   audioDriver/state<2>
+                                                       audioDriver/state_0_rstpot
+                                                       audioDriver/state_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.470ns (0.413ns logic, 0.057ns route)
+                                                       (87.9% logic, 12.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20800 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 20797.300ns (period - min period limit)
+  Period: 20800.000ns
+  Min period limit: 2.700ns (370.370MHz) (Tbcper_I)
+  Physical resource: clk_IBUF_BUFG/I0
+  Logical resource: clk_IBUF_BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: clk_IBUF
+--------------------------------------------------------------------------------
+Slack: 20799.352ns (period - min period limit)
+  Period: 20800.000ns
+  Min period limit: 0.648ns (1543.210MHz) (Tcp)
+  Physical resource: audioDriver/frameBit_3_1/CLK
+  Logical resource: audioDriver/frameBit_3_1/CK
+  Location pin: SLICE_X46Y31.CLK
+  Clock network: clk_IBUF_BUFG
+--------------------------------------------------------------------------------
+Slack: 20799.352ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20800.000ns
+  High pulse: 10400.000ns
+  High pulse limit: 0.324ns (Trpw)
+  Physical resource: audioDriver/frameBit_3_1/SR
+  Logical resource: audioDriver/frameBit_3_1/SR
+  Location pin: SLICE_X46Y31.SR
+  Clock network: btn_0_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.181|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2978 paths, 0 nets, and 432 connections
+
+Design statistics:
+   Minimum period:   7.181ns{1}   (Maximum frequency: 139.256MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Mar 23 00:57:37 2011 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 192 MB
+
+
+

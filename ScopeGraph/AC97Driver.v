@@ -1,15 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Engineer: David Bliss
 // 
 // Create Date:    23:08:00 03/21/2011 
 // Design Name: 
 // Module Name:    AC97Driver 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Project Name:   Digilent Design Competition 2011
+// Target Devices: Digilent Atlys (Rev C)
+// Tool versions:  Xilinx ISE 12.2; M.63c
+// Description: A simple line-in-only driver for the AC97 codec on the Atlys.
 //
 // Dependencies: 
 //
@@ -46,14 +45,22 @@ reg [3:0]  slotNum;
 reg        valid;
 reg [6:0]  cmdAddr;
 reg [15:0] cmdData;
+wire [15:0] slot1;
+wire [19:0] addrSlot;
+wire [19:0] dataSlot;
 
 assign aReset = ~freset;
+assign slot1 = {valid, valid, valid, 13'b0};
+assign addrSlot = {1'b0, cmdAddr, 12'b0};
+assign dataSlot = {cmdData, 4'b0};
+assign aSync = (slotNum == 12 && (frameBit == 1 || frameBit == 0)) || slotNum == 0 ? 1 : 0;
+assign aBitClk = fclk;
 
 always @ (posedge fclk or posedge freset) begin
 	if (freset) begin
-		state = 0;
-		frameBit = 0;
-		slotNum = 0;
+		state <= 0;
+		frameBit <= 0;
+		slotNum <= 0;
 		valid = 0;
 	end else begin
 		//Command logic
@@ -77,14 +84,26 @@ always @ (posedge fclk or posedge freset) begin
 					cmdData = 0;
 				end
 		endcase
+		
+		//Get the bits onto the wire
 		case (slotNum)
-			0: aSDO = {valid, valid, valid, 13'b0}[frameBit];
-			1: aSDO = {0, cmdAddr, 12'b0}[frameBit];
-			2: aSDO = {cmdData, 4'b0}[frameBit];
+			0: aSDO = slot1[frameBit];
+			1: aSDO = addrSlot[frameBit];
+			2: aSDO = dataSlot[frameBit];
 			default: aSDO = 0;
 		endcase
-		slotNum <= ( (|slotNum) & frameBit == 19 | frameBit == 15 ) ? slotNum + 1 : slotNum;
-		frameBit <= ( (|slotNum) & frameBit == 19 | frameBit == 15 ) ? 0 : slotNum + 1;
+		
+		//Update the transit state
+		slotNum <= frameBit == 0 ? slotNum + 1 : slotNum;
+		frameBit <= ( slotNum == 12 && frameBit == 0 ) ? 16 : frameBit == 0 ? 19 : frameBit - 1;
+		state <= (state == 2) ? 2 : (slotNum == 6 && frameBit == 0) ? state + 1 : state;
+		
+		//Get the bits off the wire
+		if (slotNum == 3 && frameBit > 3)
+			fAudLIn[frameBit - 3] = aSDI;
+		else if (slotNum == 4 && frameBit > 3)
+			fAudRIn[frameBit - 3] = aSDI;
+		
 	end
 end
 

@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj ScopeGraph -o C:/Users/minifig/Digilent2011/ScopeGraph/AC97Driver.tfi -lib work C:/Users/minifig/Digilent2011/ScopeGraph//AC97Driver.v -module AC97Driver -template C:/Xilinx/12.2/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj ScopeGraph -o C:/Users/minifig/Digilent2011/ScopeGraph/AC97Driver.tfi -lib work C:/Users/minifig/Digilent2011/ScopeGraph//AC97Driver.v -module AC97Driver -template C:/Xilinx/12.2/ISE_DS/ISE//data/tfi.tft -deleteonerror 
